@@ -1,0 +1,8 @@
+{
+  "mainnet": {
+    "chainlink_aggr": {
+      "address": "0x789190466E21a8b78b8027866CBBDc151542A26C",
+      "startBlock": 17586000
+    }
+  }
+}
