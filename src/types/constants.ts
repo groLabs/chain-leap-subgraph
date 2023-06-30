@@ -13,8 +13,6 @@ export class Num {
     public ONE: BigDecimal;
     public MINUS_ONE: BigDecimal;
     public THIRTY_PERCENT: BigDecimal;
-    public PWRD_START_FACTOR: BigDecimal;
-    public GVT_START_FACTOR: BigDecimal;
 }
 
 // @dev: should be aligned with enum <Token> in entities
@@ -27,23 +25,12 @@ export class Token {
 	public USDC: string;
 	public USDT: string;
     public THREE_CRV: string;
-	public UNISWAP_GVT_GRO: string;
-	public UNISWAP_GRO_USDC: string;
-	public CURVE_PWRD3CRV: string;
-	public BALANCER_GRO_WETH: string;
 }
 
 // @dev: should be aligned with enum <TxType> in entities
 export class TxType {
-    public CORE_DEPOSIT: string;
-	public CORE_WITHDRAWAL: string;
-	public STAKER_DEPOSIT: string;
-	public STAKER_WITHDRAWAL: string;
-	public TRANSFER_IN: string;
-	public TRANSFER_OUT: string;
-	public CLAIM: string;
-	public MULTICLAIM: string;
-	public VEST: string;
+    public DEPOSIT: string;
+	public WITHDRAWAL: string;
 	public APPROVAL: string;
 }
 
