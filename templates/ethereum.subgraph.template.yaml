@@ -7,11 +7,11 @@ dataSources:
 # *******************************************************************************************
   - kind: ethereum
     name: chainlink_aggr
-    network: mainnet
+    network: {{network}}
     source:
-      address: "0x789190466E21a8b78b8027866CBBDc151542A26C"
+      address: "{{chainlink_usdc_usd_address}}"
       abi: chainlink_aggr
-      startBlock: 17581000
+      startBlock: {{chainlink_usdc_usd_start_block}}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

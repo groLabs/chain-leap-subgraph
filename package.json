@@ -2,17 +2,23 @@
   "name": "chainleap",
   "license": "UNLICENSED",
   "scripts": {
+    "eth_prod": "SCOPE=prod BLOCKCHAIN=ethereum NETWORK=mainnet yarn prepare:subgraph && yarn deploy:mainnet:prod",
     "codegen": "graph codegen",
     "build": "graph build",
     "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ chainleap",
-    "create-local": "graph create --node http://localhost:8020/ chainleap",
-    "remove-local": "graph remove --node http://localhost:8020/ chainleap",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 chainleap",
-    "test": "graph test"
+    "prepare:subgraph": "mustache ./config/${NETWORK}-${SCOPE}.json ./templates/${BLOCKCHAIN}.subgraph.template.yaml > subgraph.yaml && rm -rf generated && yarn generate:schema && graph codegen && graph build",
+    "generate:addresses": "echo 'import { Contracts } from \"./src/types/constants\"; \n\nexport const contracts: Contracts = ' | cat - addresses.ts > temp && mv temp addresses.ts",
+    "generate:schema": "cp ./schemas/${BLOCKCHAIN}.schema.graphql schema.graphql && cp ./config/${NETWORK}-${SCOPE}.json addresses.ts && yarn generate:addresses",
+    "deploy:mainnet:prod": "graph deploy --studio chainleap"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.46.1",
-    "@graphprotocol/graph-ts": "0.29.1"
+    "@graphprotocol/graph-ts": "0.31.0",
+    "mustache": "^4.2.0",
+    "yargs-parser": "^21.1.1"
   },
-  "devDependencies": { "matchstick-as": "0.5.0" }
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "matchstick-as": "^0.5.2"
+  }
 }

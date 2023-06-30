@@ -1,0 +1,5 @@
+{
+    "network": "mainnet",
+    "chainlink_usdc_usd_address": "0x789190466E21a8b78b8027866CBBDc151542A26C",
+    "chainlink_usdc_usd_start_block": 17581000
+}
