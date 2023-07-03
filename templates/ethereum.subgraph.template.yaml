@@ -9,9 +9,9 @@ dataSources:
     name: chainlink_aggr_usdc_usd
     network: {{network}}
     source:
-      address: "{{chainlink_usdc_usd_address}}"
+      address: "{{chainlink_usdc_usd_addr}}"
       abi: chainlink_aggr
-      startBlock: {{chainlink_usdc_usd_start_block}}
+      startBlock: {{chainlink_start_block}}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -29,9 +29,9 @@ dataSources:
     name: chainlink_aggr_usdt_usd
     network: {{network}}
     source:
-      address: "{{chainlink_usdt_usd_address}}"
+      address: "{{chainlink_usdt_usd_addr}}"
       abi: chainlink_aggr
-      startBlock: {{chainlink_usdt_usd_start_block}}
+      startBlock: {{chainlink_start_block}}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -49,9 +49,9 @@ dataSources:
     name: chainlink_aggr_dai_usd
     network: {{network}}
     source:
-      address: "{{chainlink_dai_usd_address}}"
+      address: "{{chainlink_dai_usd_addr}}"
       abi: chainlink_aggr
-      startBlock: {{chainlink_dai_usd_start_block}}
+      startBlock: {{chainlink_start_block}}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -64,4 +64,144 @@ dataSources:
       eventHandlers:
         - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
           handler: handleDaiPriceFeed
+      file: ./src/mappings/chainlink-aggr.ts
+  - kind: ethereum
+    name: chainlink_aggr_eth_usd
+    network: {{network}}
+    source:
+      address: "{{chainlink_eth_usd_addr}}"
+      abi: chainlink_aggr
+      startBlock: {{chainlink_start_block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerUpdated
+      abis:
+        - name: chainlink_aggr
+          file: ./abis/chainlink_aggr.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleEthPriceFeed
+      file: ./src/mappings/chainlink-aggr.ts
+  - kind: ethereum
+    name: chainlink_aggr_btc_usd
+    network: {{network}}
+    source:
+      address: "{{chainlink_btc_usd_addr}}"
+      abi: chainlink_aggr
+      startBlock: {{chainlink_start_block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerUpdated
+      abis:
+        - name: chainlink_aggr
+          file: ./abis/chainlink_aggr.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleBtcPriceFeed
+      file: ./src/mappings/chainlink-aggr.ts
+  - kind: ethereum
+    name: chainlink_aggr_matic_usd
+    network: {{network}}
+    source:
+      address: "{{chainlink_matic_usd_addr}}"
+      abi: chainlink_aggr
+      startBlock: {{chainlink_start_block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerUpdated
+      abis:
+        - name: chainlink_aggr
+          file: ./abis/chainlink_aggr.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleMaticPriceFeed
+      file: ./src/mappings/chainlink-aggr.ts
+  - kind: ethereum
+    name: chainlink_aggr_ada_usd
+    network: {{network}}
+    source:
+      address: "{{chainlink_ada_usd_addr}}"
+      abi: chainlink_aggr
+      startBlock: {{chainlink_start_block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerUpdated
+      abis:
+        - name: chainlink_aggr
+          file: ./abis/chainlink_aggr.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAdaPriceFeed
+      file: ./src/mappings/chainlink-aggr.ts
+  - kind: ethereum
+    name: chainlink_aggr_crv_usd
+    network: {{network}}
+    source:
+      address: "{{chainlink_crv_usd_addr}}"
+      abi: chainlink_aggr
+      startBlock: {{chainlink_start_block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerUpdated
+      abis:
+        - name: chainlink_aggr
+          file: ./abis/chainlink_aggr.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleCrvPriceFeed
+      file: ./src/mappings/chainlink-aggr.ts
+  - kind: ethereum
+    name: chainlink_aggr_avax_usd
+    network: {{network}}
+    source:
+      address: "{{chainlink_avax_usd_addr}}"
+      abi: chainlink_aggr
+      startBlock: {{chainlink_start_block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerUpdated
+      abis:
+        - name: chainlink_aggr
+          file: ./abis/chainlink_aggr.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAvaxPriceFeed
+      file: ./src/mappings/chainlink-aggr.ts
+  - kind: ethereum
+    name: chainlink_aggr_doge_usd
+    network: {{network}}
+    source:
+      address: "{{chainlink_doge_usd_addr}}"
+      abi: chainlink_aggr
+      startBlock: {{chainlink_start_block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerUpdated
+      abis:
+        - name: chainlink_aggr
+          file: ./abis/chainlink_aggr.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleDogePriceFeed
       file: ./src/mappings/chainlink-aggr.ts
