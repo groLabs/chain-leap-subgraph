@@ -17,9 +17,18 @@ export const NUM: Num = {
     ONE: BigDecimal.fromString('1'),
     MINUS_ONE: BigDecimal.fromString('-1'),
     THIRTY_PERCENT: BigDecimal.fromString('0.3'),
+    SIX_DECIMAL:  BigDecimal.fromString('1000000'),
+    EIGHT_DECIMAL : BigDecimal.fromString('100000000'),
 }
 
 // Addresses
 export const ADDR: Addr = {
     ZERO: Bytes.fromHexString('0x0000000000000000000000000000000000000000'),
+}
+
+// Tokens
+export enum Token {
+	usdc,
+	usdt,
+	dai,
 }

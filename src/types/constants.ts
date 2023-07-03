@@ -13,6 +13,8 @@ export class Num {
     public ONE: BigDecimal;
     public MINUS_ONE: BigDecimal;
     public THIRTY_PERCENT: BigDecimal;
+    public SIX_DECIMAL: BigDecimal;
+    public EIGHT_DECIMAL: BigDecimal;
 }
 
 // @dev: should be aligned with enum <Token> in entities
