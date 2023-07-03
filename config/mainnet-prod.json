@@ -1,5 +1,9 @@
 {
     "network": "mainnet",
     "chainlink_usdc_usd_address": "0x789190466E21a8b78b8027866CBBDc151542A26C",
-    "chainlink_usdc_usd_start_block": 17581000
+    "chainlink_usdc_usd_start_block": 17581000,
+    "chainlink_usdt_usd_address": "0xa964273552C1dBa201f5f000215F5BD5576e8f93",
+    "chainlink_usdt_usd_start_block": 17581000,
+    "chainlink_dai_usd_address": "0x478238a1c8B862498c74D0647329Aef9ea6819Ed",
+    "chainlink_dai_usd_start_block": 17581000
 }
