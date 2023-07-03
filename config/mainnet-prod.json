@@ -1,9 +1,14 @@
 {
     "network": "mainnet",
-    "chainlink_usdc_usd_address": "0x789190466E21a8b78b8027866CBBDc151542A26C",
-    "chainlink_usdc_usd_start_block": 17581000,
-    "chainlink_usdt_usd_address": "0xa964273552C1dBa201f5f000215F5BD5576e8f93",
-    "chainlink_usdt_usd_start_block": 17581000,
-    "chainlink_dai_usd_address": "0x478238a1c8B862498c74D0647329Aef9ea6819Ed",
-    "chainlink_dai_usd_start_block": 17581000
+    "chainlink_start_block": 17600000,
+    "chainlink_usdc_usd_addr": "0x789190466E21a8b78b8027866CBBDc151542A26C",
+    "chainlink_usdt_usd_addr": "0xa964273552C1dBa201f5f000215F5BD5576e8f93",
+    "chainlink_dai_usd_addr": "0x478238a1c8B862498c74D0647329Aef9ea6819Ed",
+    "chainlink_eth_usd_addr": "0xE62B71cf983019BFf55bC83B48601ce8419650CC",
+    "chainlink_btc_usd_addr": "0xdBe1941BFbe4410D6865b9b7078e0b49af144D2d",
+    "chainlink_matic_usd_addr": "0x4b35f7854e1fd8291f4ec714ac3ebb1dea450585",
+    "chainlink_ada_usd_addr": "0xbC3C868763b7C15d0ce527af455041919E9c07B1",
+    "chainlink_crv_usd_addr": "0xb4c4a493AB6356497713A78FFA6c60FB53517c63",
+    "chainlink_avax_usd_addr": "0x0fC3657899693648bbA4dbd2d8b33b82E875105D",
+    "chainlink_doge_usd_addr": "0x33CCa8E7420114dB103d61bd39A72ff65E46352D"
 }

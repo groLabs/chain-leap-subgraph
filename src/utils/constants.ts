@@ -28,7 +28,15 @@ export const ADDR: Addr = {
 
 // Tokens
 export enum Token {
+    eth_gas,
 	usdc,
 	usdt,
 	dai,
+    eth,
+    btc,
+    matic,
+    ada,
+    crv,
+    avax,
+    doge,
 }
